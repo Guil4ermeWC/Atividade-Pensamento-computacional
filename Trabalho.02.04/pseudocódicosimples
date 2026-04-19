@@ -1,0 +1,42 @@
+INÍCIO
+    // Configurações Iniciais
+    DEFINIR pinos para 4 Botões, 6 LEDs e 2 Servos
+    POSICIONAR Servos em 0 graus (Portão Fechado)
+
+    REPETIR SEMPRE (Loop Principal):
+        
+        // Verificação de Comandos
+        SE Botão_Direito for pressionado:
+            LIGAR LED_Amarelo
+            MOVER Servo_Direito para 90 graus
+            DESLIGAR LED_Amarelo
+            
+        SE Botão_Esquerdo for pressionado:
+            LIGAR LED_Amarelo
+            MOVER Servo_Esquerdo para 90 graus
+            DESLIGAR LED_Amarelo
+            
+        SE Botão_Ambos for pressionado:
+            LIGAR LED_Amarelo
+            MOVER Servo_Direito e Servo_Esquerdo para 90 graus
+            DESLIGAR LED_Amarelo
+            
+        SE Botão_Fechar_Tudo for pressionado:
+            LIGAR LED_Amarelo
+            MOVER Servo_Direito e Servo_Esquerdo para 0 graus
+            DESLIGAR LED_Amarelo
+
+        // Atualização dos LEDs de Estado
+        SE Servo_Esquerdo em 0: LIGAR LED_Vermelho_Esq  SENÃO: LIGAR LED_Verde_Esq
+        SE Servo_Direito em 0: LIGAR LED_Vermelho_Dir  SENÃO: LIGAR LED_Verde_Dir
+        
+        // Lógica de Estados Gerais
+        SE (Servo_Direito == 90 E Servo_Esquerdo == 90):
+            LIGAR LED_Azul (Tudo Aberto)
+        SENÃO:
+            DESLIGAR LED_Azul
+
+        SE (Apenas um lado estiver em 90):
+            LIGAR LED_Amarelo (Estado Intermediário)
+
+FIM
