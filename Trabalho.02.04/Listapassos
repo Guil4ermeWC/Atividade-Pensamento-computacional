@@ -1,0 +1,38 @@
+2. Lista de Passos (Lógica do Projeto)
+Para a construção da simulação, seguimos este roteiro lógico:
+
+Definição de Hardware: Identificação dos pinos digitais para os 4 botões, 6 LEDs e os 2 Servomotores (Servo 1 e Servo 2).
+
+Configuração Inicial (Setup):
+
+Configuração dos pinos dos botões como INPUT.
+
+Configuração dos pinos dos LEDs como OUTPUT.
+
+Posicionamento inicial dos servos em 0° (estado de portão fechado).
+
+Monitoramento de Entradas (Loop): O sistema fica em um ciclo constante verificando se algum dos botões foi acionado (estado HIGH).
+
+Execução de Comandos:
+
+Botão 1: Aciona o giro do Servo Esquerdo para 90°.
+
+Botão 2: Aciona o giro do Servo Direito para 90°.
+
+Botão 3: Aciona o giro de ambos os servos para 90°.
+
+Botão 4: Retorna ambos os servos para 0° (Fechamento).
+
+Controle do LED de Movimento: Durante o acionamento de qualquer motor, o LED Amarelo é mantido aceso para indicar perigo/movimentação.
+
+Verificação de Feedback (LEDs de Estado): * Após o movimento, o sistema lê a posição dos motores.
+
+Se a posição for 0°, acende o LED Vermelho correspondente.
+
+Se a posição for 90°, acende o LED Verde correspondente.
+
+Condições Especiais:
+
+Se ambos estiverem em 90°, o LED Azul é ativado (Passagem Totalmente Livre).
+
+Se houver apenas um lado aberto, o LED Amarelo permanece ligado como alerta de estado intermediário.
