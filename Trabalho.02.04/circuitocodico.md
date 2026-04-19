@@ -2,7 +2,7 @@
 
 Aqui está a captura de tela do circuito montado no Tinkercad:
 
-![Circuito do Portão Automático](circuito.png)
+![Circuito do Portão Automático](circuito.png.png)
 
 ---
 
@@ -10,9 +10,9 @@ Aqui está a captura de tela do circuito montado no Tinkercad:
 
 Abaixo, a captura da lógica implementada:
 
-![Print do Código Tinkercad](codico1.png)
-![Print do Código Tinkercad](codico2.png)
-![Print do Código Tinkercad](codico3.png)
+![Print do Código Tinkercad](codico1.png.png)
+![Print do Código Tinkercad](codico2.png.png)
+![Print do Código Tinkercad](codico3.png.png)
 
 > **Nota:** O código-fonte completo também pode ser encontrado no arquivo `projeto.ino` deste repositório.
   
