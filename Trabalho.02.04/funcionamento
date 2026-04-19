@@ -1,0 +1,23 @@
+Desenvolva essa simulação no Tinkercad utilizando Arduino, implementando:
+● O que o sistema precisa fazer
+● lista de passos
+● pseudocódigo simples
+● Montagem do circuito
+● Print do código
+
+Entrega pelo GitHub!!!
+1. O que o sistema precisa fazer
+O objetivo deste projeto é desenvolver a simulação de um sistema de controle para um portão automático de duas folhas (duas partes), utilizando a plataforma Arduino. O sistema visa automatizar a entrada de uma empresa, garantindo controle individual ou conjunto das folhas do portão e fornecendo feedback visual constante ao usuário.
+
+Funcionalidades principais:
+Controle de Acesso: Permite a abertura independente do lado esquerdo, do lado direito ou de ambos simultaneamente, além de um comando para o fechamento total.
+
+Monitoramento de Estado: Através de um conjunto de 6 LEDs, o sistema indica visualmente:
+
+Se cada folha está totalmente aberta ou fechada.
+
+Se o portão está em movimento ou em estado intermediário (espera).
+
+Se a passagem está completamente liberada (ambos abertos).
+
+Segurança Visual: Alerta o usuário através de um LED amarelo sempre que houver movimentação nos motores ou uma configuração que não seja o fechamento total.
