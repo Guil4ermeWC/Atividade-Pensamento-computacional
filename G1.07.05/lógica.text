@@ -1,0 +1,55 @@
+### Questão 01 — Entradas e Saídas
+
+**Entradas do sistema:**
+
+* Sensor LDR (fotoresistor) para identificar a intensidade da luz do ambiente;
+* Botão do modo automático;
+* Botão do modo de alerta;
+* Botão para desligar o sistema.
+
+**Saída do sistema:**
+
+* LED RGB responsável por indicar visualmente o estado da iluminação através das cores verde, amarelo e vermelho.
+
+
+### Questão 02 — Componentes utilizados
+
+* **Arduino:** responsável pelo processamento e controle geral do sistema;
+* **LED RGB:** utilizado para representar os diferentes estados de iluminação;
+* **Protoboard:** utilizada para montagem e testes do circuito sem necessidade de solda;
+* **Resistores:** limitam e controlam a passagem de corrente elétrica;
+* **LDR (fotoresistor):** sensor que detecta a quantidade de luz presente no ambiente.
+
+
+### Questão 03 — Regras de funcionamento
+
+O sistema deve utilizar o LDR para monitorar a luminosidade do ambiente. Conforme a intensidade detectada, o LED RGB deve indicar:
+
+* Ambiente claro → LED verde;
+* Ambiente com luz média → LED amarelo;
+* Ambiente escuro → LED vermelho.
+
+Funcionamento dos botões:
+
+* **Botão 1:** ativa o modo automático, permitindo que o LED RGB responda à leitura do LDR;
+* **Botão 2:** ativa o modo de alerta, mantendo o LED vermelho ligado independentemente da luminosidade;
+* **Botão 3:** desliga completamente o sistema e apaga todos os LEDs.
+
+O sistema também deve tratar corretamente situações em que mais de um botão seja pressionado ao mesmo tempo, evitando conflitos no funcionamento.
+
+
+### Questão 04 — Uso das estruturas IF
+
+As estruturas condicionais `if` são utilizadas para definir o comportamento do sistema conforme as entradas recebidas.
+
+Exemplos:
+
+* Se a leitura do LDR indicar alta luminosidade, o LED verde será acionado;
+* Se a luminosidade for intermediária, o LED amarelo será ligado;
+* Se o ambiente estiver escuro, o LED vermelho será ativado.
+
+Além disso:
+
+* Quando o botão do modo automático estiver ativo, o sistema deve responder às leituras do LDR;
+* Quando o botão de alerta estiver pressionado, o LED vermelho deve permanecer ligado;
+* Quando o botão de desligamento for acionado, todos os LEDs devem ser apagados.
