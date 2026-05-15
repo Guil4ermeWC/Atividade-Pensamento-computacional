@@ -12,7 +12,7 @@ int botao2 = 0;
 
 int botao3 = 0;
 
-int potenciometro = 0;
+int iluminacao = 0;
 
 int estado = 0;
 
@@ -42,7 +42,7 @@ void loop()
   botao1 = digitalRead(8);
   botao2 = digitalRead(9);
   botao3 = digitalRead(7);
-  potenciometro = analogRead(A1);
+  iluminacao = analogRead(A1);
   Serial.println(botao1);
   if (botao1 == HIGH) {
     estado = 1;
@@ -54,19 +54,19 @@ void loop()
     estado = 3;
   }
   if (estado == 1) {
-    if (potenciometro > 5 && potenciometro < 207) {
+    if (iluminacao > 5 && iluminacao < 207) {
       digitalWrite(2, HIGH);
       digitalWrite(3, LOW);
       digitalWrite(4, LOW);
     } else {
     }
-    if (potenciometro > 250 && potenciometro < 500) {
+    if (iluminacao > 250 && iluminacao < 500) {
       digitalWrite(2, HIGH);
       digitalWrite(4, HIGH);
       digitalWrite(3, LOW);
     } else {
     }
-    if (potenciometro > 500) {
+    if (iluminacao > 500) {
       digitalWrite(4, HIGH);
       digitalWrite(3, LOW);
       digitalWrite(2, LOW);
